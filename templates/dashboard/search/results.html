@@ -25,7 +25,7 @@
               action="{% url "dashboard:search" %}">
           <input id="icon_prefix" type="text" class="validate left"
                  placeholder="{% trans "Search" context "Dashboard search" %}"
-                 name="q" value="{% if query %}{{ query }}{% endif %}">
+                 name="q" value="{% if query %}{{ query }}{% endif %}" required>
           <button class="btn-flat" type="submit">
             <svg data-src="{% static "dashboard/images/search.svg" %}"
                  width="20" height="20" fill="#E57373"/>
@@ -33,7 +33,7 @@
         </form>
         <form class="hide-on-med-and-up row" method="get"
               action="{% url "dashboard:search" %}">
-          <input type="hidden" class="validate" name="q"
+          <input type="hidden" class="validate" name="q" required
                  value="{% if query %}{{ query }}{% endif %}">
         </form>
       </div>
